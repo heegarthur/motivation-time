@@ -1,0 +1,177 @@
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.timers-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.timer-section {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 0 12px #222;
+}
+
+canvas {
+    background-color: #222;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.digital-display {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+button {
+    background-color: #444;
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 5px 5px 5px 0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0078d4;
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: default;
+}
+
+.encouragement {
+    margin-top: 10px;
+    min-height: 24px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#settings {
+    margin-top: 40px;
+    width: 600px;
+    background-color: #1e1e1e;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px #222;
+}
+
+#quotes-input {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    resize: vertical;
+    background-color: #333;
+    color: white;
+}
+
+.disco {
+    animation: disco-flash 0.3s infinite alternate;
+}
+
+@keyframes disco-flash {
+    0% {
+        color: #ff0055;
+    }
+
+    25% {
+        color: #00ffff;
+    }
+
+    50% {
+        color: #ffcc00;
+    }
+
+    75% {
+        color: #00ff00;
+    }
+
+    100% {
+        color: #ff00ff;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    .timers-container {
+        flex-direction: column;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .timer-section {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    canvas {
+        width: 180px;
+        height: 180px;
+    }
+
+    .digital-display {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+        margin: 6px 0;
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    #settings {
+        width: 100%;
+        max-width: 360px;
+        margin: 30px auto 0 auto;
+    }
+
+    #quotes-input {
+        font-size: 0.95rem;
+    }
+
+    button {
+        touch-action: manipulation;
+    }
+
+}
